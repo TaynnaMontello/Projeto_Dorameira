@@ -1,0 +1,247 @@
+/* ============================== */
+/*          ESTILO GLOBAL         */
+/* ============================== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffafc;
+  color: #3a3a3a;
+  margin: 0;
+  padding: 0 20px;
+  text-align: center;
+}
+/* Apenas na página inicial */
+body.inicio {
+  margin-left: 280px;
+}
+
+
+h1 {
+  color: #e94e77;
+  margin-top: 40px;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 3px rgba(233, 78, 119, 0.2);
+}
+
+/* ============================== */
+/*            MENU LATERAL        */
+/* ============================== */
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #f5c8e6;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu-lateral h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-lateral a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #7a005c;
+  padding: 8px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.menu-lateral a:hover {
+  background: #ffebf7;
+}
+
+/* ============================== */
+/*         BOTÃO VOLTAR           */
+/* ============================== */
+
+.voltar {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 10px 0;
+  background-color: #ff4794;
+  color: white; 
+  text-decoration: none; 
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.voltar:hover {
+  background-color: #cc3455; 
+  transform: scale(1.05); 
+}
+
+/* versão fixa usada em algumas páginas */
+.voltar.fixo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #f5c8e6;
+  color: #7a005c;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+/* ============================== */
+/*        TEXTOS E INTRO          */
+/* ============================== */
+
+.intro {
+  max-width: 800px;
+  margin: 10px auto 40px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.Tabela_dos_melhores, .Contato {
+  margin: 10px auto;
+}
+
+/* Botões */
+.Tabela_dos_melhores a, .Contato a {
+  display: inline-block;
+  background-color: #e94e77;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(233, 78, 119, 0.2);
+}
+
+.Tabela_dos_melhores a:hover, .Contato a:hover {
+  background-color: #d73f68;
+  transform: translateY(-2px);
+}
+
+/* ============================== */
+/*        COLEÇÃO DE DORAMAS      */
+/* ============================== */
+
+.colecao {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding-bottom: 60px;
+}
+
+/* Card individual */
+.dorama-item {
+  display: block;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+}
+
+.dorama-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(233, 78, 119, 0.2);
+}
+
+.dorama-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #e94e77;
+}
+
+.dorama-nome {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #e94e77;
+  margin-top: 10px;
+}
+
+.estrelas {
+  color: gold;
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.descricao {
+  font-size: 0.9em;
+  color: #666;
+  padding: 0 10px 15px;
+  line-height: 1.4;
+}
+
+/* ============================== */
+/*     PÁGINA DE DETALHES         */
+/* ============================== */
+
+.dorama-detalhe {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.dorama-detalhe img {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.dorama-detalhe .estrelas {
+    font-size: 1.5em;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.dorama-detalhe .descricao {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 15px 0 30px;
+}
+
+/* ============================== */
+/*           RESPONSIVO           */
+/* ============================== */
+
+@media (max-width: 600px) {
+  body {
+    margin-left: 0;
+    padding: 0 10px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .intro {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
+  .menu-lateral {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  body {
+    margin-left: 0;
+  }
+}

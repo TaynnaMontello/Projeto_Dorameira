@@ -1,0 +1,168 @@
+/* ===================== BASE ===================== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffe1ed, #ffffff);
+}
+
+/* ===================== MENU SUPERIOR ===================== */
+.top-menu {
+    width: 100%;
+    background-color: #ff4f81;
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Torna o menu adaptável */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.top-menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.top-menu a:hover {
+    background-color: #ff84a0;
+}
+
+/* ===================== BOTÃO VOLTAR ===================== */
+.voltar {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #f5c8e6;
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #7a005c;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    transition: 0.2s;
+    z-index: 900;
+}
+
+.voltar:hover {
+    transform: scale(1.05);
+}
+
+/* ===================== CONTEÚDO ===================== */
+main {
+    padding: 120px 20px 60px;
+    max-width: 1200px;
+    margin: auto; /* Centraliza em telas grandes */
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff4f81;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* ===================== GRID DE ATORES ===================== */
+.atores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* 🔥 se adapta sozinho ao tamanho da tela */
+    gap: 25px;
+}
+
+/* ===================== CARDS ===================== */
+.card-ator {
+    background: #fff0f7;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card-ator:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(255, 100, 150, 0.3);
+}
+
+/* Imagem redimensionável e sempre proporcional */
+.card-ator img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4; /* mantém formato IGUAL em todas as telas */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Nome */
+.card-ator h3 {
+    font-size: 1.3rem;
+    color: #ff4f81;
+    margin: 12px 0 8px;
+}
+
+/* Texto */
+.card-ator p {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Tags */
+.tag {
+    display: inline-block;
+    background: #ffb6ce;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin: 3px;
+    color: #7a005c;
+    font-weight: bold;
+}
+
+/* ===================== RESPONSIVIDADE REAL OFICIAL ===================== */
+
+/* Telas grandes */
+@media (min-width: 1400px) {
+    .atores-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    main {
+        padding: 150px 15px 60px;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    .top-menu {
+        padding: 10px 5px;
+        gap: 10px;
+    }
+
+    .top-menu a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .voltar {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}

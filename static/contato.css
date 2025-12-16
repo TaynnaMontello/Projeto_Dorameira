@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7e0e0;
+    margin: 0;
+    padding: 0;
+}
+header {
+    padding: 15px;
+    background-color: #f8bbbb;
+}
+header a {
+    color: rgb(163, 46, 46);
+    text-decoration: none;
+    font-weight: bold;
+}
+header a:hover{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(163, 46, 46);
+    margin-top: 20px;
+}
+
+/* Aviso fixo no canto superior direito */
+.aviso {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    background-color: #ffe4f4;
+    border-left: 6px solid #ff7ac4;
+    padding: 15px 20px;
+
+    width: 260px;
+    border-radius: 12px;
+
+    font-size: 0.95rem;
+    color: #7a005c;
+    font-weight: 600;
+
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    z-index: 2000;
+
+    animation: aparecer 0.4s ease-out;
+}
+
+/* Animação suave para surgir */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+legend {
+    color: rgb(163, 46, 46);
+    font-weight: bold;
+    padding: 0 5px;
+}
+label {
+    color: rgb(75, 46, 46);
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px; 
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #c24a4a;
+    color: rgb(230, 203, 203);
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(230, 203, 203);
+    color:  #bd4343;
+}

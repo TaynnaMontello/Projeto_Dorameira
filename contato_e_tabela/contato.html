@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Mundo das Dorameiras</title>
+    <link rel="stylesheet" href="../static/contato.css">
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="voltar">← Voltar para a lista</a>
+    </header>
+
+    <h1>Formulário de Sugestões</h1>
+        <div class="aviso">
+            💗 Antes de enviar sua sugestão, confira se suas informações estam corretas!
+        </div>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+            <label for="nome">Nome:
+                <input type="text" id="nome" name="nome" required>
+            </label>
+            <label for="email">E-mail:
+                <input type="email" id="email" name="email" required>
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Tipo de Sugestão</legend>
+            <label><input type="radio" id="critica" name="tipo" value="critica" required>Crítica</label>
+            <label><input type="radio" id="elogio" name="tipo" value="elogio">Elogio</label>
+            <label><input type="radio" id="dica" name="tipo" value="dica">Dica</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Assuntos de Interesse</legend>
+            <label><input type="checkbox" id="doramas" name="interesse" value="doramas">Doramas</label>
+            <label><input type="checkbox" id="noticias" name="interesse" value="noticias">Notícias do site</label>
+            <label><input type="checkbox" id="outros" name="interesse" value="outros">Outros</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensagem</legend>
+            <label for="mensagem">Escreva sua sugestão:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
